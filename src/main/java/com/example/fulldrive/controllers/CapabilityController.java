@@ -25,7 +25,7 @@ public class CapabilityController {
     public CollectionModel<EntityModel<Capability>> getAllCapabilities() {
         return CollectionModel.of(capabilityService.getAll().stream()
                         .map(capability -> assembler.toModel(capability)).toList(),
-                Link.of("http://localhost:8080/dashboard", "create_new_cap"));
+                Link.of("https://hateos-back-spring.herokuapp.com/dashboard", "create_new_cap"));
     }
 
     @GetMapping("/{id}")

@@ -18,6 +18,6 @@ public class CapabilityResourceAssembler implements RepresentationModelAssembler
                 linkTo(methodOn(CapabilityController.class).getCapability(entity.getId())).withRel("get_this_cap"),
                 linkTo(methodOn(CapabilityController.class).deleteCapability(entity.getId())).withRel("delete_this_cap"),
                 linkTo(methodOn(CapabilityController.class).getAllCapabilities()).withRel("get_all_caps"),
-                Link.of("http://localhost:8080/dashboard/" + entity.getId(), "update_this_cap"));
+                Link.of("https://hateos-back-spring.herokuapp.com/dashboard/" + entity.getId(), "update_this_cap"));
     }
 }
